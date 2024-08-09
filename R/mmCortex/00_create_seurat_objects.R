@@ -12,7 +12,8 @@ subdir.names <- list.files(data.dir, pattern = 'filtered',
 
 # load count matrices
 sdata.counts <- lapply(subdir.names, Read10X, gene.column = 1)
-names(sdata.counts) <- str_remove(subdir.names, '/Solo.out/Gene/filtered')
+names(sdata.counts) <- str_remove(subdir.names, '/Solo.out/Gene/filtered')  # used for scRNA-seq datasets
+names(sdata.counts) <- str_remove(subdir.names, '/Solo.out/GeneFull/filtered')  # used for snRNA-seq datasets
 
 # load sample info
 sample.info <- read_csv('mmCortex_sample_info.csv')

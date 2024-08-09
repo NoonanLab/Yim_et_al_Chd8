@@ -8,6 +8,7 @@ STAR --runThreadN 6 \
 --readFilesIn Aligned_unique.bam,Aligned_multi_primary_n1.bam \
 --readFilesPrefix /path/to/alignments_AllBestScore/SAMPLE/ \
 --readFilesCommand samtools view -F 0x100 \
+--outFileNamePrefix /filter_multimap_counts/SAMPLE/ \
 --outSAMtype None \
 --soloType CB_UMI_Simple \
 --soloCBwhitelist /path/to/3M-february-2018.txt \

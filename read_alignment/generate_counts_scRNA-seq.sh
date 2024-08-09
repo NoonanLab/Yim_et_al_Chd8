@@ -1,5 +1,7 @@
-# Generate count matrices from filtered BAM files
+#!/bin/bash
+
 # STAR v2.7.9a
+# Generate count matrices from filtered BAM files
 STAR --runThreadN 6 \
 --genomeDir /path/to/GENOME/mm10_cellranger_2020-A/star/ \
 --readFilesType SAM SE \

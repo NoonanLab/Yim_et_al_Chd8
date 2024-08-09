@@ -1,3 +1,5 @@
+# This step was not run for the snRNA-seq dataset.
+
 # load packages
 require(tidyverse)
 require(Seurat)

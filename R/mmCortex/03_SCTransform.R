@@ -13,8 +13,12 @@ sdata.batch <- SplitObject(sdata.batch, split.by = 'batch')
 sdata.batch <- lapply(sdata.batch, function(obj) {
   obj@project.name <- unique(obj$batch)
   message('[ SCTranform: Batch ', obj@project.name, ' ]')
-  obj$CC.Difference <- obj$S.Score - obj$G2M.Score
-  vars.to.regress <- c('CC.Difference', 'percent_mito')
+  # for scRNA-seq dataset
+  obj$CC.Difference <- obj$S.Score - obj$G2M.Score  
+  vars.to.regress <- c('CC.Difference', 'percent_mito') 
+  # for snRNA-seq dataset
+  vars.to.regress <- c('percent_mito') 
+  # for all datasets
   obj <- SCTransform(obj, vars.to.regress = vars.to.regress)
   message(); return(obj)
 })

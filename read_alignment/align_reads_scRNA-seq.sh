@@ -1,6 +1,9 @@
+#!/bin/bash
+
 # STAR v2.7.9a
 # Cell Ranger Reference, 2020-A
 # Mouse reference, mm10 (GENCODE vM23/Ensembl 98)
+# Input: single-cell RNA-seq data generated using 10x Genomics Chromium Next GEM Single-Cell 3’ Reagent Kits for v2 chemistry
 
 # Generate genome indices
 STAR --runThreadN 6 \
@@ -23,7 +26,7 @@ STAR --runThreadN 6 \
 --outSAMmultNmax 10 \
 --outBAMcompression 10 \
 --soloType CB_UMI_Simple \
---soloCBwhitelist 737K-august-2016.txt \
+--soloCBwhitelist /path/to/737K-august-2016.txt \
 --soloBarcodeReadLength 1 \
 --soloCBmatchWLtype 1MM_multi \
 --soloMultiMappers Unique \

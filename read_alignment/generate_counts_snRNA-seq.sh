@@ -6,7 +6,7 @@ STAR --runThreadN 6 \
 --genomeDir /path/to/GENOME/mm10_cellranger_2020-A/star/ \
 --readFilesType SAM SE \
 --readFilesIn Aligned_unique.bam,Aligned_multi_primary_n1.bam \
---readFilesPrefix /path/to/alignments_AllBestScore/SAMPLE/ \
+--readFilesPrefix /path/to/mmCortex_snRNA-seq/alignments_AllBestScore/SAMPLE/ \
 --readFilesCommand samtools view -F 0x100 \
 --outFileNamePrefix /filter_multimap_counts/SAMPLE/ \
 --outSAMtype None \

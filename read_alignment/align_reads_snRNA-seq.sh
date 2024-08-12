@@ -17,9 +17,9 @@ STAR --runThreadN 6 \
 # Align reads
 STAR --runThreadN 6 \
 --genomeDir /path/to/GENOME/mm10_cellranger_2020-A/star/ \
---readFilesManifest /path/to/mmCortex_snRNA/file_manifests/SAMPLE_readFiles.tsv \
+--readFilesManifest /path/to/mmCortex_snRNA-seq/file_manifests/SAMPLE_readFiles.tsv \
 --readFilesCommand zcat \
---outFileNamePrefix /path/to/mmCortex_snRNA/alignments_AllBestScore/SAMPLE/ \
+--outFileNamePrefix /path/to/mmCortex_snRNA-seq/alignments_AllBestScore/SAMPLE/ \
 --outSAMtype BAM Unsorted \
 --outSAMattributes NH HI AS nM CR CY UR UY GX GN \
 --outSAMprimaryFlag AllBestScore \

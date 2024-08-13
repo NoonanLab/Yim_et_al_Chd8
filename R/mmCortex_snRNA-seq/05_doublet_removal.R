@@ -13,7 +13,7 @@ Idents(sdata.align) <- sdata.align$seurat_clusters <- sdata.align$integrated_snn
 sdata.sce <- as.SingleCellExperiment(sdata.align, assay = "RNA")
 
 # run scDblFinder with cluster-informed sampling
-sdata.sce <- scDblFinder(sdata.sce, clusters = 'seurat_clusters', samples = 'sample.id', verbose = TRUE)
+sdata.sce <- scDblFinder(sdata.sce, clusters = 'seurat_clusters', samples = 'sample_id', verbose = TRUE)
 
 # save SCE scDblFinder output
 saveRDS(sdata.sce, 'sdata_align_snRNA-seq_scDblFinder-sce.rds')

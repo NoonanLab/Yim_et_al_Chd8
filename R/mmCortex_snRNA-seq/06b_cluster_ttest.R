@@ -24,9 +24,9 @@ cluster.data.out <- cluster.data %>%
 write_csv(cluster.data.out, 'cluster_data_singlet_all.csv')
 
 # prepare to subset clusters to those passing cluster-based filtering steps, excluding clusters that:
-	# (1) contained < 200 singlet nuclei; 
-	# (2) disproportionately consisted of nuclei from one batch (≥75%); or
-	# (3) could not be assigned a cell type identity, due to ambiguous marker genes
+	# (1) contain < 200 singlet nuclei; 
+	# (2) disproportionately consist of nuclei from one batch (≥75%); or
+	# (3) cannot be assigned a cell type identity, due to ambiguous marker genes
 clusters.exclude <- c('L5-IT_2', 'mCtx', 'Clau', 'Str', 'N?',
                       'Glia+UL', 'Glia+iN', 'AG+DL', 'AG+N', 'MG+UL', 'MG+DL')
 clusters.keep <- setdiff(levels(sdata.align$cluster_label), clusters.exclude)

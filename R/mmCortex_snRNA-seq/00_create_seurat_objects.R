@@ -69,4 +69,4 @@ sdata.list <- lapply(names(sdata0),
 }, sample.info = sample.info, mt.genes = mt.genes) %>% set_names(names(sdata0))
 
 # save as list
-saveRDS(sdata.list, 'sdata_mmCortex_list.rds')
+saveRDS(sdata.list, 'sdata_mmCortex_snRNA-seq_list.rds')

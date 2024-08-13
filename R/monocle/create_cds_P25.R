@@ -4,8 +4,11 @@ require(Seurat)
 require(monocle3)
 
 # load data
-sdata.P25 <- readRDS('sdata_align-scDblFinder_Chd8-P25-rep23-filteralign-nodoublets_all-assays.rds')
+sdata.P25 <- readRDS('sdata_align_snRNA-seq_singlet.rds')
 sdata.P25 <- DietSeurat(sdata.P25, assays = 'RNA')
+
+# set Idents to cluster labels
+Idents(sdata.align) <- sdata.align$cluster_label
 
 # load gene names table
 gene.names <- read_csv('gene_names.csv')
@@ -29,7 +32,7 @@ cds_P25 <- new_cell_data_set(expression_data = counts(temp.sce),
 cds_P25$genotype <- relevel(as.factor(cds_P25$genotype), ref = 'wt')
 cds_P25$sex <- relevel(as.factor(cds_P25$sex), ref = 'male')
 
-# split by cluster labels
+# split by cluster labels passing filtering steps
 clusters.exclude <- c('L5-IT_2', 'mCtx', 'Clau', 'Str', 'N?', 
                       'Glia+UL', 'Glia+iN', 'AG+DL', 'AG+N', 'MG+UL', 'MG+DL')
 clusters.keep <- setdiff(levels(cds_P25$cluster_label), clusters.exclude)

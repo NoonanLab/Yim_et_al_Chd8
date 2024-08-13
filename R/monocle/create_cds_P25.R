@@ -8,7 +8,7 @@ sdata.P25 <- readRDS('sdata_align_snRNA-seq_singlet.rds')
 sdata.P25 <- DietSeurat(sdata.P25, assays = 'RNA')
 
 # set Idents to cluster labels
-Idents(sdata.align) <- sdata.align$cluster_label
+Idents(sdata.P25) <- sdata.P25$cluster_label
 
 # load gene names table
 gene.names <- read_csv('gene_names.csv')

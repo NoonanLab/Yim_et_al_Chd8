@@ -1,5 +1,5 @@
 # Custom Code for Single-Cell and Single-Nucleus Analyses in Yim et al., 2024
-This repository cripts used for analyzing mouse embryonic cortex single-cell RNA-sequencing, published human fetal cortex single-cell RNA-sequencing, and mouse juvenile cortex single-nucleus RNA-sequencing datasets, as reported in:
+Scripts used for analyzing mouse embryonic cortex single-cell RNA-sequencing, published human fetal cortex single-cell RNA-sequencing, and mouse juvenile cortex single-nucleus RNA-sequencing datasets, as reported in:
 
 Kristina M Yim*, Marybeth Baumgartner*, Martina Krenzer*, María F. Rosales Larios, Guillermina Hill-Terán, Timothy Nottoli, Rebecca A Muhle, and James P Noonan (2024). Cell type-specific dysregulation of gene expression due to *Chd8* haploinsufficiency during mouse cortical development. *bioRxiv* date tbd. [doi](link tbd).
 # Read Alignment and Filtering

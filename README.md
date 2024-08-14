@@ -1,7 +1,7 @@
 # Custom Code for Single-Cell and Single-Nucleus Analyses in Yim et al., 2024
 Scripts used for analyzing mouse embryonic cortex single-cell RNA-sequencing, published human fetal cortex single-cell RNA-sequencing, and mouse juvenile cortex single-nucleus RNA-sequencing datasets, as reported in:
 
-Kristina M Yim*, Marybeth Baumgartner*, Martina Krenzer*, María F. Rosales Larios, Guillermina Hill-Terán, Timothy Nottoli, Rebecca A Muhle, and James P Noonan (2024). Cell type-specific dysregulation of gene expression due to Chd8 haploinsufficiency during mouse cortical development. *bioRxiv* date. [doi](link).
+Kristina M Yim*, Marybeth Baumgartner*, Martina Krenzer*, María F. Rosales Larios, Guillermina Hill-Terán, Timothy Nottoli, Rebecca A Muhle, and James P Noonan (2024). Cell type-specific dysregulation of gene expression due to *Chd8* haploinsufficiency during mouse cortical development. *bioRxiv* date. [doi](link).
 # Read Alignment and Filtering
 For each mouse single-cell or single-nucleus sample, fastq reads were aligned to the mm10 reference genome using [STAR](https://doi.org/10.1093/bioinformatics/bts635/) v2.7.9a. Reads mapping to more than 10 loci were then discarded, as were multi-mapping reads with more than one best scoring alignment. Aligned reads passing these criteria were used to generate single-cell and single-nucleus count matrices using STAR. 
 

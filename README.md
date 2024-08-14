@@ -3,7 +3,7 @@ Scripts used for analyzing mouse embryonic cortex single-cell RNA-sequencing, pu
 
 Kristina M Yim*, Marybeth Baumgartner*, Martina Krenzer*, María F. Rosales Larios, Guillermina Hill-Terán, Timothy Nottoli, Rebecca A Muhle, and James P Noonan (2024). *bioRxiv* date. [doi](link).
 # Read Alignment and Filtering
-For each single-cell or single-nucleus sample, fastq reads were aligned to the mm10 reference genome using [STAR](https://doi.org/10.1093/bioinformatics/bts635/) v2.7.9a. Reads mapping to more than 10 loci were then discarded, as were multi-mapping reads with more than one best scoring alignment. Aligned reads passing these criteria were used to generate single-cell and single-nucleus count matrices using STAR. 
+For each mouse single-cell or single-nucleus sample, fastq reads were aligned to the mm10 reference genome using [STAR](https://doi.org/10.1093/bioinformatics/bts635/) v2.7.9a. Reads mapping to more than 10 loci were then discarded, as were multi-mapping reads with more than one best scoring alignment. Aligned reads passing these criteria were used to generate single-cell and single-nucleus count matrices using STAR. 
 
 The `read_alignment` directory contains all scripts for single-cell and single-nucleus read alignment, read filtering, and generating counts. Input fastq files are available through the Gene Expression Omnibus (GEO) under accession numbers GSE273271, for the single-cell dataset, and GSE273765, for the single-nucleus dataset.
 ## Single-Cell Data

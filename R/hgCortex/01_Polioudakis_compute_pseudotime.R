@@ -23,7 +23,7 @@ sdata.hg$CC.Difference <- sdata.hg$S_phase_score - sdata.hg$G2M_phase_score
 
 # select clusters for computing PHATE
 #     Include: vRG oRG PgS PgG2M IP ExN ExM ExM-U ExDp1 ExDp2
-#     Exlude:  InMGE InCGE OPC End Per Mic
+#     Exclude:  InMGE InCGE OPC End Per Mic
 sdata.hg$compute_phate <- F
 sdata.hg$compute_phate[grep('RG$|^Pg|IP|^Ex', sdata.hg$Cluster)] <- T
 

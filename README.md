@@ -1,10 +1,10 @@
 **Custom scripts used for analyzing mouse embryonic cortex single-cell RNA-sequencing (scRNA-seq) data, published human fetal cortex scRNA-seq data, and mouse juvenile cortex single-nucleus RNA-sequencing data, as reported in:**
 
-Kristina M Yim*, Marybeth Baumgartner*, Martina Krenzer*, María F. Rosales Larios, Guillermina Hill-Terán, Timothy Nottoli, Rebecca A Muhle, and James P Noonan (2024). Cell type-specific dysregulation of gene expression due to *Chd8* haploinsufficiency during mouse cortical development. *bioRxiv* date tbd. [doi tbd](link).
+Kristina M Yim*, Marybeth Baumgartner*, Martina Krenzer*, María F. Rosales Larios, Guillermina Hill-Terán, Timothy Nottoli, Rebecca A Muhle, and James P Noonan (2024). Cell type-specific dysregulation of gene expression due to *Chd8* haploinsufficiency during mouse cortical development. *bioRxiv*, 2024.08.14.608000. [https://doi.org/10.1101/2024.08.14.608000](https://doi.org/10.1101/2024.08.14.608000).
 ## Read Alignment and Filtering
 For each mouse single-cell or single-nucleus sample, fastq reads were aligned to the mm10 reference genome using STAR v2.7.9a ([Dobin et al., 2012](https://doi.org/10.1093/bioinformatics/bts635)). Reads mapping to more than 10 loci were then discarded, as were multi-mapping reads with more than one best scoring alignment. Aligned reads passing these criteria were used to generate single-cell and single-nucleus count matrices using STAR. 
 
-The `read_alignment` directory contains all scripts for single-cell and single-nucleus read alignment, read filtering, and generating counts. Input fastq files are available through the Gene Expression Omnibus (GEO) under accession numbers GSE273271, for the single-cell dataset, and GSE273765, for the single-nucleus dataset.
+The `read_alignment` directory contains all scripts for single-cell and single-nucleus read alignment, read filtering, and generating counts. Input fastq files are available through the Gene Expression Omnibus (GEO) under accession numbers [GSE273271](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE273271), for the single-cell dataset, and [GSE273765](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE273765), for the single-nucleus dataset.
 ### Single-Cell Data
 - `align_reads_scRNA-seq.sh`
 - `filter_multimap_reads.sh`
@@ -14,7 +14,7 @@ The `read_alignment` directory contains all scripts for single-cell and single-n
 - `filter_multimap_reads.sh`
 - `generate_counts_snRNA-seq.sh`
 ## Single-Cell Analysis of Embryonic Mouse Cortex
-The `R/mmCortex_scRNA-seq` directory contains all R scripts for preliminary data filtering, downsampling, normalization, integration, cluster analysis, pseudotime analysis, and metagene analysis for the scRNA-seq dataset. Seurat v4.0.4 ([Hao et al., 2021](https://doi.org/10.1016/j.cell.2021.04.048)) was used to perform preliminary analysis, normalization, integration, and cluster analysis. Input counts matrices are available through GEO under accession number GSE273271. 
+The `R/mmCortex_scRNA-seq` directory contains all R scripts for preliminary data filtering, downsampling, normalization, integration, cluster analysis, pseudotime analysis, and metagene analysis for the scRNA-seq dataset. Seurat v4.0.4 ([Hao et al., 2021](https://doi.org/10.1016/j.cell.2021.04.048)) was used to perform preliminary analysis, normalization, integration, and cluster analysis. Input counts matrices are available through GEO under accession number [GSE273271](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE273271). 
 ### Preliminary Analysis
 For each sample in the scRNA-seq dataset, low quality cells and potential doublets were filtered by thresholding on the total feature counts per cell, the number of genes detected per cell, and the percentage of counts originating from mitochondrial RNA. Filtered count matrices were downsampled based on median feature counts by time point, for use in downstream metagene and differential expression analysis scripts, using DropletUtils v1.14.2 ([Griffiths et al., 2018](https://doi.org/10.1038/s41467-018-05083-x)).
 - `00_create_seurat_objects.R`
@@ -47,7 +47,7 @@ We log-normalized the count matrix, identified variable features, and regressed 
 - `02_Polioudakis_bin_expression.R`
 - `03_Polioudakis_sax_metagenes.R`
 ## Single-Nucleus Analysis of Juvenile Mouse Cortex
-The `R/mmCortex_snRNA-seq` directory contains all R scripts for preliminary data filtering, normalization, integration, preliminary clustering, doublet removal, and cluster analysis for the snRNA-seq dataset. Input counts matrices are available through GEO under accession number GSE273765. 
+The `R/mmCortex_snRNA-seq` directory contains all R scripts for preliminary data filtering, normalization, integration, preliminary clustering, doublet removal, and cluster analysis for the snRNA-seq dataset. Input counts matrices are available through GEO under accession number [GSE273765](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE273765). 
 ### Preliminary Analysis
 For each sample in the snRNA-seq dataset, low quality cells were filtered by thresholding on the percentage of counts originating from mitochondrial RNA. 
 - `00_create_seurat_objects.R`

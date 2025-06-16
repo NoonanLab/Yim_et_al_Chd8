@@ -1,4 +1,4 @@
-**Custom scripts used for analyzing mouse embryonic cortex single-cell RNA-sequencing (scRNA-seq) data, published human fetal cortex scRNA-seq data, and mouse juvenile cortex single-nucleus RNA-sequencing data, as reported in:**
+**Custom scripts used for analyzing mouse embryonic cortex single-cell RNA-sequencing (scRNA-seq) data, published human fetal cortex scRNA-seq data, and mouse juvenile cortex single-nucleus RNA-sequencing data, alongside scripts for quantifying CHD8-to-nuclear stain signal ratio, as reported in:**
 
 Kristina M Yim*, Marybeth Baumgartner*, Martina Krenzer*, María F. Rosales Larios, Guillermina Hill-Terán, Timothy Nottoli, Rebecca A Muhle, and James P Noonan (2024). Cell type-specific dysregulation of gene expression due to *Chd8* haploinsufficiency during mouse cortical development. *bioRxiv*, 2024.08.14.608000. [https://doi.org/10.1101/2024.08.14.608000](https://doi.org/10.1101/2024.08.14.608000).
 ## Read Alignment and Filtering
@@ -81,3 +81,8 @@ For each time point, Monocle 3 was run on each filtered cds object from upstream
 - `monocle_E16.R`
 - `monocle_E17.R`
 - `monocle_P25.R`
+## Quantification of CHD8 immunostaining and Hoechst 33342 nuclear staining across the wild type embryonic cortex
+The `IHC_quantification` directory contains all scripts for processing immunohistochemistry (IHC) image files for quantification of CHD8-to-Hoechst 33342 signal ratios across the apicobasal axis of the wild type embryonic cortex. For each IHC image file, we cropped three non-overlapping regulatory strips spanning the apicobasal axis of the developing cortex. The full image files and cropped image files are available through [Dryad](https://doi.org/10.5061/dryad.3bk3j9kxv). Each column image file was subdivided into 10 equally spaced bins, followed by quantification of CHD8 and Hoechst 33342 signal in the red and blue channels, respectively, of each bin. This pipeline requires [ImageMagick](https://imagemagick.org/) v6.8 or above. These scripts and this approach match those from [Dominguez et al., 2019](https://doi.org/10.1093/cercor/bhs252). 
+- `ImageSlicer.sh`
+- `count.sh`
+- `process.pl`
